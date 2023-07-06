@@ -10,5 +10,3 @@ document.querySelector('.menu-close').addEventListener("click", ()=>{
       document.querySelector('.menu-mobile').classList.toggle("show")
 })
 
-//console.log(document.querySelector("#github").offsetTop);
-//scroll({top: 200, behavior: "smooth"})
