@@ -159,14 +159,18 @@ nav {
 
 
 .background-a{
-    background: rgba(255, 255, 255, 0.432);
+    background: rgba(226, 221, 221, 0.88);
     max-width: 180px;
     padding: 3vh 5vw;
     position: relative;
     border-radius: 400px 20px 200px;
     box-sizing: content-box;
-    padding: 70px ;
-    display: grid;
+    padding: 30px 50px;
+    color: black;
+    svg{
+        padding: 0 10px;
+        box-sizing: content-box;
+    }
 }
 
 .arrow{
@@ -196,9 +200,7 @@ footer{
                 display: none;
             }
         }
-        .background-a{
-            background-color: gray;
-        }
+
     }
     @media (max-width: 575px){
         header{
@@ -220,23 +222,17 @@ footer{
            color: white;
         }
 
-        .background-a{
-            border-radius: 0px;
-            max-width: none;
-        }
-
         .contact-wrapper{
             min-width: 77vw;
+        }
+        .background-a{
+            margin: 0 auto;
         }
 
     }
     @media (min-width: 467px) {
         .lista > li{
             display: none;
-        }
-        .background-a{
-            background-color: 0;
-            padding: 0;
         }
 
     }
