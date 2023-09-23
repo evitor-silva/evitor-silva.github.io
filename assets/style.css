@@ -104,7 +104,9 @@ footer {
   color: white;
   background: -webkit-linear-gradient(315deg, var(--bs-success-border-subtle) 0%, var(--bs-form-valid-border-color) 100%);
 }
-
+.text-about{
+  max-width: 800px;
+}
 @media (max-width: 576px) {
   .perfil {
     justify-content: center;
