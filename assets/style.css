@@ -54,18 +54,23 @@
   --bs-form-invalid-border-color: #ea868f;
 }
 
+.navbar {
+  z-index: 55;
+}
+
 .pa-img {
   position: relative;
   top: -60px;
   left: 12px;
   border-radius: 50% 0 50% 50%;
+  margin: 0 auto;
   overflow: hidden;
   box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
 }
 
 .pa-img img {
   padding: 10vw;
-  transform: rotate(-5deg);
+  transform: rotate(-10deg);
   border-radius: 140px;
 }
 
@@ -104,9 +109,7 @@ footer {
   color: white;
   background: -webkit-linear-gradient(315deg, var(--bs-success-border-subtle) 0%, var(--bs-form-valid-border-color) 100%);
 }
-.text-about{
-  max-width: 800px;
-}
+
 @media (max-width: 576px) {
   .perfil {
     justify-content: center;
@@ -115,6 +118,14 @@ footer {
     width: 80vw;
   }
   .pa-img {
+    top: 0;
+    left: 0;
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+  }
+  .welcome {
     display: none;
   }
 }/*# sourceMappingURL=style.css.map */
