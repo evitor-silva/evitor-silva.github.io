@@ -64,12 +64,13 @@
     left: 12px;
     border-radius: 50% 0 50% 50%;
     margin: 0 auto;
+    z-index: 5;
     overflow: hidden;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
 }
 
 .pa-img img {
-    padding: 10vw;
+    padding: 8vw;
     transform: rotate(-10deg);
     border-radius: 140px;
 }
@@ -105,9 +106,20 @@
     align-self: center;
 }
 
+.text-about {
+    max-width: 700px;
+}
+
 footer {
     color: white;
     background: -webkit-linear-gradient(315deg, var(--bs-success-border-subtle) 0%, var(--bs-form-valid-border-color) 100%);
+}
+
+.welcome {
+    background-image: url("./119-1199352_november-12th-transparent-spring-boot-icon-removebg-preview.png");
+    background-repeat: no-repeat;
+    background-size: 30%;
+    background-position: bottom left;
 }
 
 @media (max-width: 576px) {
@@ -128,8 +140,17 @@ footer {
         justify-content: center;
     }
 
-    .welcome {
-        display: none;
+    .reverse {
+        flex-direction: column-reverse;
     }
 
+    .welcome {
+        text-align: center;
+        justify-content: center;
+        background-size: 80px;
+    }
+
+    .tx-2{
+        font-size: calc(0.825rem + 1.1vw);
+    }
 }
