@@ -46,7 +46,7 @@
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">{{rep.full_name}}</h5>
-              <p class="card-text">{{rep.description}}</p>
+              <p class="card-text" style="padding: 10px 0 0px; ">{{rep.description}}</p>
             </div>
           </div>
         </div>
@@ -98,12 +98,13 @@
     .background-top-1 {
       display: none;
     }
-
   }
 
   .card {
     height: 7em;
     display: -webkit-box;
+    white-space: normal;
+    -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
     overflow: hidden;
     -webkit-box-orient: vertical;
