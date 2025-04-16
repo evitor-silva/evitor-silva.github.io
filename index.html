@@ -1,0 +1,121 @@
+<!doctype html data-bs-theme="dark">
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+
+<body>
+  <main class="container py-4" id="app">
+    <div class="position-relative background-top-1">
+      <div class="position-absolute bottom-0 start-0">
+        <div class="background-style bg-secondary"></div>
+      </div>
+    </div>
+    <div class="row mb-2 h-md-250">
+      <div class="col p-4 d-flex align-items-center">
+        <div class="p-2">
+          <h2 class="text-3xl fst-italic underline">
+            Olá, me chamo
+          </h2>
+          <h1 class="display-4 underline">
+            Vitor Silva
+          </h1>
+          <p class="lead my-3">
+            Desenvolvedor PHP & Vue.js
+          </p>
+          <a href="https://www.linkedin.com/in/vitor-e-silva/" target="_blank" rel="Linkedin">
+            <button type="button" class="btn btn-secondary mt-3">Contato</button>
+          </a>
+        </div>
+      </div>
+      <div class="col-auto d-none d-lg-block p-2">
+        <img src="th.jfif" class="rounded img-fluid" alt="" srcset="">
+      </div>
+    </div>
+    <div class="px-2 rounded h-md-250">
+      <h3 class="p-2">Meus Últimos Repositórios.</h3>
+      <div class="row px-2">
+        <div class="d-flex justify-content-center" id="loading-spinner">
+          <div class="spinner-border" style="width: 8rem; height: 8rem;" role="status">
+          </div>
+        </div>
+        <div v-for="rep in repo" class="col-12 col-sm-12 col-md-4 p-1">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">{{rep.full_name}}</h5>
+              <p class="card-text">{{rep.description}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <footer class="bg-body-tertiary text-center text-lg-start mt-3">
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+        © 2025 Copyright &VitorSilva
+      </div>
+    </footer>
+  </main>
+</body>
+
+<script type="module">
+  import { createApp, ref } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
+
+  document.documentElement.setAttribute('data-bs-theme', 'dark');
+
+  createApp({
+    data() {
+      return {
+        repo: []
+      }
+    },
+    created() {
+      this.getRepo();
+    },
+    methods: {
+      async getRepo() {
+        try {
+          const reponse = await fetch('https://api.github.com/users/evitor-silva/repos')
+          this.repo = await reponse.json();
+        } catch (error) {
+          return console.log('Erro no fetch')
+        } finally {
+          document.querySelector('#loading-spinner').innerHTML = ''
+        }
+      }
+    }
+  }).mount('#app')
+</script>
+
+</html>
+<style>
+  @media screen and (max-width: 991px) {
+    .background-top-1 {
+      display: none;
+    }
+
+  }
+
+  .card {
+    height: 7em;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+  }
+
+  .background-style {
+    width: calc(70vw + 50px);
+    height: calc(70vw + 50px);
+    border-radius: 50%;
+  }
+
+  .img-fluid {
+    max-height: 400px;
+  }
+</style>
