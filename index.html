@@ -1,122 +1,125 @@
-<!doctype html data-bs-theme="dark">
-<html>
+<!doctype html>
+<html lang="pt-BR" data-bs-theme="dark">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Vitor Silva. | Desenvolvedor Java & Spring Boot</title>
+
+  <meta name="description"
+    content="Desenvolvedor Java especialista em Spring Boot e criação de APIs RESTful. Conheça meus projetos e entre em contato.">
+
+  <link rel="canonical" href="https://www.seusite.com.br/">
+
+  <meta name="keywords"
+    content="Desenvolvedor Java, Spring Boot, API REST, Portfólio, Programador, Full Stack, EVitorSilva.">
+  <meta name="author" content="Vitor Silva.">
+
+  <meta property="og:title" content="Vitor Silva. | Desenvolvedor Java & Spring Boot">
+  <meta property="og:description"
+    content="Portfólio de um desenvolvedor Java especialista em Spring Boot e APIs RESTful.">
+  <meta property="og:image" content="https://www.seusite.com.br/path/para/sua-foto-de-perfil.jpg">
+  <meta property="og:url" content="https://www.seusite.com.br/">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:title" content="Vitor M. | Desenvolvedor Java & Spring Boot">
+  <meta name="twitter:description"
+    content="Portfólio de um desenvolvedor Java especialista em Spring Boot e APIs RESTful.">
   <link rel="stylesheet" href="bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Vitor M.",
+    "url": "https://www.seusite.com.br/",
+    "image": "https://www.seusite.com.br/path/para/sua-foto-de-perfil.jpg",
+    "jobTitle": "Desenvolvedor Java",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Freelancer, Desenvolvedor Java"
+    },
+    "sameAs": [
+      "https://github.com/evitor-silva",
+      "https://www.linkedin.com/in/vitor-e-silva/"
+    ]
+  }
+  </script>
+
 </head>
 
 <body>
-  <main class="container py-4" id="app">
-    <div class="position-relative background-top-1">
-      <div class="position-absolute bottom-0 start-0">
-        <div class="background-style bg-secondary"></div>
-      </div>
-    </div>
-    <div class="row mb-2 h-md-250">
-      <div class="col p-4 d-flex align-items-center">
-        <div class="p-2">
-          <h2 class="text-3xl fst-italic underline">
-            Olá, me chamo
-          </h2>
-          <h1 class="display-4 underline">
-            Vitor Silva
-          </h1>
-          <p class="lead my-3">
-            Desenvolvedor PHP & Vue.js
-          </p>
-          <a href="https://www.linkedin.com/in/vitor-e-silva/" target="_blank" rel="Linkedin">
-            <button type="button" class="btn btn-secondary mt-3">Contato</button>
-          </a>
-        </div>
-      </div>
-      <div class="col-auto d-none d-lg-block p-2">
-        <img src="th.jfif" class="rounded img-fluid" alt="" srcset="">
-      </div>
-    </div>
-    <div class="px-2 rounded h-md-250">
-      <h3 class="p-2">Meus Últimos Repositórios.</h3>
-      <div class="row px-2">
-        <div class="d-flex justify-content-center" id="loading-spinner">
-          <div class="spinner-border" style="width: 8rem; height: 8rem;" role="status">
-          </div>
-        </div>
-        <div v-for="rep in repo" class="col-12 col-sm-12 col-md-4 p-1">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">{{rep.full_name}}</h5>
-              <p class="card-text" style="padding: 10px 0 0px; ">{{rep.description}}</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    </div>
 
-    <footer class="bg-body-tertiary text-center text-lg-start mt-3">
-      <!-- Copyright -->
-      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
-        © 2025 Copyright &VitorSilva
+  <div class="container">
+
+    <nav class="navbar">
+      <div class="container-fluid">
+        <a class="navbar-brand fw-bold" href="#">Vitor</a>
       </div>
+    </nav>
+
+    <header class="hero-section my-5">
+      <div class="row align-items-center g-5">
+
+        <div class="col-12 col-md-6">
+          <div class="d-flex flex-column justify-content-center h-100">
+            <h1 class="display-4 fw-bold">Oi, eu sou <span class="green-color">Vitor</span></h1>
+            <h2 class="display-5">Desenvolvedor <span class="typewriter"></span><span class="cursor"></span></h2>
+            <p class="lead mt-3">
+              Um desenvolvedor Java apaixonado por criar soluções robustas e eficientes.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6">
+          <div class="card-cv text-center p-4 rounded-4">
+            <img src="https://static.vecteezy.com/system/resources/previews/000/439/863/original/vector-users-icon.jpg"
+              class="profile-img mb-3" alt="Foto de Vitor">
+            <h3 class="mb-2">Vitor</h3>
+          </div>
+        </div>
+
+      </div>
+    </header>
+
+    <section id="my-projects" class="my-5 py-5">
+      <h2 class="display-5 fw-bold text-center mb-5">Meus Projetos</h2>
+      <div class="row g-4">
+
+        <div class="col-12 col-md-6">
+          <div class="card-project p-4 rounded-4 h-100">
+            <h4>Transação API</h4>
+            <p>Sistema feito em Java com Spring Boot para calcular estatísticas de transações que aconteceram nos
+              últimos 60 segundos.</p>
+
+            <a href="https://github.com/evitor-silva/transacao" target="_blank" rel="Ir para repositório Transacao">
+              <button type="button" class="btn btn-lg btn-light ">Repositorio</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6">
+          <div class="card-project p-4 rounded-4 h-100">
+            <h4>RabbitMQ Manager</h4>
+            <p>Sistema simplificado para gerenciar exchanges, queues e consumidores em uma aplicação com RabbitMQ.</p>
+            <a href="https://github.com/evitor-silva/rabbitmq" target="_blank" rel="Ir para repositório RabbitMQ">
+              <button type="button" class="btn btn-lg btn-light ">Repositorio</button>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <footer class="bg-body-tertiary py-4 mt-5 text-center">
+      <p class="mb-0 text-body-secondary">&copy; 2025 Vitor Silva. Todos os direitos reservados.</p>
     </footer>
-  </main>
+
+  </div>
+
+  <script src="script.js"></script>
 </body>
 
-<script type="module">
-  import { createApp, ref } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
-
-  document.documentElement.setAttribute('data-bs-theme', 'dark');
-
-  createApp({
-    data() {
-      return {
-        repo: []
-      }
-    },
-    created() {
-      this.getRepo();
-    },
-    methods: {
-      async getRepo() {
-        try {
-          const reponse = await fetch('https://api.github.com/users/evitor-silva/repos')
-          this.repo = await reponse.json();
-        } catch (error) {
-          return console.log('Erro no fetch')
-        } finally {
-          document.querySelector('#loading-spinner').innerHTML = ''
-        }
-      }
-    }
-  }).mount('#app')
-</script>
-
 </html>
-<style>
-  @media screen and (max-width: 991px) {
-    .background-top-1 {
-      display: none;
-    }
-  }
-
-  .card {
-    height: 7em;
-    display: -webkit-box;
-    white-space: normal;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
-    overflow: hidden;
-    -webkit-box-orient: vertical;
-  }
-
-  .background-style {
-    width: calc(70vw + 50px);
-    height: calc(70vw + 50px);
-    border-radius: 50%;
-  }
-
-  .img-fluid {
-    max-height: 400px;
-  }
-</style>

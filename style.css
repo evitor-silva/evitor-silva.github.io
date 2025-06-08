@@ -1,0 +1,55 @@
+ :root {
+   --primary-color: #3498db;
+   --secondary-color: #2ecc71;
+   --text-color: #333;
+   --background-color: #fff;
+   --font-family: Arial, Helvetica, sans-serif;
+ }
+
+ .green-color {
+   color: #198754;
+ }
+
+ .card-cv {
+   background-color: rgba(255, 255, 255, 0.05);
+   border: 1px solid rgba(255, 255, 255, 0.1);
+   backdrop-filter: blur(10px);
+ }
+
+ .profile-img {
+   width: 100px;
+   height: 100px;
+   border-radius: 50%;
+   object-fit: cover;
+   border: 3px solid #198754;
+ }
+
+ .card-project {
+   background-color: var(--bs-tertiary-bg);
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+ }
+
+ .card-project:hover {
+   transform: translateY(-8px);
+   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+ }
+
+ .cursor {
+   display: inline-block;
+   background-color: white;
+   width: 3px;
+   margin-left: 5px;
+   animation: blink 1s infinite;
+ }
+
+ @keyframes blink {
+
+   0%,
+   100% {
+     opacity: 1;
+   }
+
+   50% {
+     opacity: 0;
+   }
+ }
